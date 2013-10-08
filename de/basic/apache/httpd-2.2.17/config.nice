@@ -1,0 +1,9 @@
+#! /bin/sh
+#
+# Created by configure
+
+"./configure" \
+"--prefix=/usr/local/httpd-2.2.x" \
+"--enable-so" \
+"--enable-rewrite" \
+"$@"

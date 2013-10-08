@@ -1,0 +1,17 @@
+#! /bin/sh
+#
+# Created by configure
+
+"/home/dinglin/文档/httpd-2.2.17/srclib/apr-util/configure" \
+"--disable-option-checking" \
+"--enable-so" \
+"--enable-rewrite" \
+"--cache-file=/dev/null" \
+"--srcdir=/home/dinglin/文档/httpd-2.2.17/srclib/apr-util" \
+"--with-apr=../apr" \
+"--prefix=/usr/local/httpd-2.2.x" \
+"--exec-prefix=/usr/local/httpd-2.2.x" \
+"--libdir=/usr/local/httpd-2.2.x/lib" \
+"--includedir=/usr/local/httpd-2.2.x/include" \
+"--bindir=/usr/local/httpd-2.2.x/bin" \
+"$@"

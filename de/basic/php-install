@@ -1,0 +1,43 @@
+#!/bin/bash 
+
+#export a='asdf';
+
+# if install php
+is_php_ins=`php -version`
+if [ "$?" = 0 ]
+then
+    echo "php has installed"
+    exit
+fi
+
+# install GCC
+sudo apt-get install gcc
+sudo apt-get install g++
+sudo apt-get install autoconf
+
+# get php ext
+sudo apt-get install libxml2
+sudo apt-get install libxml2-dev
+sudo apt-get install libevent-1.4-2
+sudo apt-get install libevent-dev
+sudo apt-get install bzip2
+sudo apt-get install libbz2-dev
+sudo apt-get install libcurl3-gnutls
+sudo apt-get install libcurl4-gnutls-dev
+sudo apt-get install libpng12-0
+sudo apt-get install libpng12-dev
+sudo apt-get install libjpeg62 (ubuntu 10.10)
+sudo apt-get install libjpeg62-dev (ubuntu 10.10)
+sudo apt-get install libjpeg8 (ubuntu 11.04)
+sudo apt-get install libjpeg8-dev (ubuntu 11.04)
+sudo apt-get install libfreetype6
+sudo apt-get install libfreetype6-dev
+sudo apt-get install libmcrypt4
+sudo apt-get install libmcrypt-dev
+sudo apt-get install libtidy-0.99-0
+sudo apt-get install libtidy-dev
+
+ln -s /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/ (ubuntu 11.04)
+ln -s /usr/lib/x86_64-linux-gnu/libpng.a /usr/lib/ (ubuntu 11.04)
+ln -s /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib/ (ubuntu 11.04)
+

@@ -1,0 +1,13 @@
+prefix=/usr/local/httpd-2.2.x
+exec_prefix=/usr/local/httpd-2.2.x
+libdir=${prefix}/lib
+APRUTIL_MAJOR_VERSION=1
+includedir=/usr/local/httpd-2.2.x/include
+
+Name: APR Utils
+Description: Companion library for APR
+Version: 1.3.10
+# assume that apr-util requires libapr of same major version
+Requires: apr-1
+Libs: -L${libdir} -laprutil-${APRUTIL_MAJOR_VERSION}  /home/dinglin/文档/httpd-2.2.17/srclib/apr-util/xml/expat/libexpat.la
+Cflags: -I${includedir}

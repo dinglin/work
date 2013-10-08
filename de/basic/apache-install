@@ -1,0 +1,32 @@
+
+export is_compile="$1"
+path_base=`pwd`
+path_apache="apache/httpd-2.2.171"
+path_install="/usr/local/httpd-2.2.x"
+
+#编译安装
+if [ "$is_compile" = "true" ]
+then
+    source_file="$path_base"/"$path_apache"
+    if [ -d "$source_file" ]
+    then
+        cd "$source_file"
+        ./configure --prefix="$path_install" --enable-so --enable-rewrite 
+        sudo make && install
+    else
+        echo "ERROR : directory \"$source_file\" is not exist"
+    fi
+else
+#系统自带安装
+    sudo apt-get install apache2
+fi
+
+# output install info
+output_file="$path_base"/../output
+if [ ! -f "$output_file" ]
+then 
+    touch "$output_file"
+fi
+echo "-----install apache info-----" >> "$output_file"
+echo "is install compiled : $is_compile" >> "$output_file"
+echo "       install path : $path_install" >> "$output_file"
