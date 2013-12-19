@@ -1,0 +1,13 @@
+#code
+
+git clone git@git.corp.anjuke.com:_user_site/haozu-site haozu-site
+cd haozu-site
+git remote add branch git@git.corp.anjuke.com:site/user-branch
+
+#config
+cp -rf config haozu-site
+
+#pages
+git clone git@git.corp.anjuke.com:haozu/pages.git
+#chmod a+rw ./
+

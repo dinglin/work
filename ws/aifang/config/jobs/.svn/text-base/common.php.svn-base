@@ -1,0 +1,12 @@
+<?php
+$config['luceneNewHomeUpdateLogFile'] = "/home/www/logs/newhome/update_newhome_index.log";
+$config['luceneNewHomeUpdateLogIng']  = "/home/www/logs/newhome/log_newhome_update.log";
+$config['memcache_log_dir'] = "/home/www/log/memcache/";
+$config['cache_updater_primary_idc'] = 1;
+
+$config['nh_loupan_index_updater'] = array(
+    "http://192.168.1.24:8984/aifang-loupan/update",
+);
+$config['nh_properties_index_updater'] = array(
+    "http://192.168.1.24:8984/aifang-property/update",
+);
