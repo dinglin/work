@@ -12,3 +12,5 @@ svn checkout http://projects.dev.anjuke.com/svn/sites/pages
 
 #chmod a+rw ./
 
+sudo cp anjuke.conf /usr/local/httpd-x/conf/extra/                                
+echo 'include anjuke.conf' >> http.conf   
